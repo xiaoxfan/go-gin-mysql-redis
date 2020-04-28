@@ -1,0 +1,40 @@
+in-prod: false
+
+server:
+  port: 9003
+
+app-dir: /Users/hrbc/Workspace/github/go-gin-mysql-redis
+
+log-dir: /Users/hrbc/Workspace/github/go-gin-mysql-redis
+logfile: ./api.log
+
+assets-path: ./assets
+
+gin:
+  graceful-showdown: false
+  statics: ./statics
+
+database:
+  driver: mysql
+  host: 127.0.0.1
+  port: 33060
+  username: root
+  password: 123456
+  dbname: posts
+
+xorm:
+  show-sql: true
+  template-path: ./api/xorm/templates
+
+redis:
+  host: 127.0.0.1
+  port: 63790
+  password: 12345
+
+# 验证码360秒过期
+captcha:
+  expire-second: 360
+
+jwt:
+  expire-time: 2592000000 # 1000月
+  signature: 343retrgf354
